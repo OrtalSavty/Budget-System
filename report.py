@@ -14,9 +14,7 @@ class ReportGenerator:
             return cat.value
         return str(cat)
 
-    # --------------------------------
     # יצוא כל העסקאות לקובץ CSV
-    # --------------------------------
     def export_transactions_to_csv(self, filename=None):
         # בדיקה אם יש עסקאות למשתמש
         if not self.fm.user.transactions:
@@ -57,11 +55,10 @@ class ReportGenerator:
                 })
 
         print(f"✅ קובץ CSV נשמר: {os.path.abspath(final_filename)}")
-        return final_filename   # מחזיר את הנתיב לקובץ CSV כדי להשתמש ביצירת הגרפים
+        # מחזיר את הנתיב לקובץ CSV כדי להשתמש ביצירת הגרפים
+        return final_filename
 
-    # --------------------------------
     # יצוא גרף של הכנסות לפי קטגוריה
-    # --------------------------------
     def plot_incomes_by_category(self, csv_filename):
         # חישוב סכום לכל קטגוריה
         category_totals = {}
@@ -90,9 +87,7 @@ class ReportGenerator:
         plt.close()
         print(f"✅ גרף הכנסות נשמר: {os.path.abspath(img_filename)}")
 
-    # --------------------------------
     # יצוא גרף של הוצאות לפי קטגוריה
-    # --------------------------------
     def plot_expenses_by_category(self, csv_filename):
         # חישוב סכום לכל קטגוריה
         category_totals = {}
@@ -120,9 +115,7 @@ class ReportGenerator:
         plt.close()
         print(f"✅ גרף הוצאות נשמר: {os.path.abspath(img_filename)}")
 
-    # --------------------------------
     # יצוא גרף מסכם: הכנסות מול הוצאות
-    # --------------------------------
     def plot_income_vs_expense(self, csv_filename):
         # חישוב סכום כולל הכנסות והוצאות
         total_expenses = sum(t["amount"] for t in self.fm.user.transactions if t["type"] == "expense")
