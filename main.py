@@ -49,7 +49,7 @@ def main():
         print("\n--- תפריט ראשי ---")
         print("1. הוספת הוצאה")
         print("2. הוספת הכנסה")
-        print("3. הצגת כל הפעולות")
+        print("3. יצוא טבלת אקסל מסכמת וגרפים")
         print("4. סיכום כללי")
         print("5. הוצאות לפי קטגוריה")
         print("6. הכנסות לפי קטגוריה")
@@ -112,7 +112,13 @@ def main():
 
         # אם נבחר "3" יופיע הדוח בשלם כולל תאריכים
         elif choice == "3":
-            rg.export_transactions_to_csv("דוח_פעולות.csv")
+            # אם נבחר "3" יופיע הדוח בשלם כולל תאריכים
+            csv_file = rg.export_transactions_to_csv()
+            if csv_file:
+                rg.plot_incomes_by_category(csv_file)
+                rg.plot_income_vs_expense(csv_file)
+                rg.plot_expenses_by_category(csv_file)
+
 
         # אם נבחר "4" יופיע סיכום כללי של הכנסות הוצאות ומאזן
         elif choice == "4":
@@ -131,9 +137,12 @@ def main():
             print("להתראות 👋")
             break
 
+
     # כל בחירת מספר אחר תוביל לניסיון חוזר כי הבחירה אינה חוקית
         else:
             print("בחירה לא חוקית, נסה שוב.")
+
+
 
 if __name__ == "__main__":
     main()
