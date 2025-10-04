@@ -1,0 +1,66 @@
+{
+    "אורטל": {
+        "password": "85d6385b945c0d602103db39b0b654b2af93b5127938e26a959c123f0789b948",
+        "transactions": [
+            {
+                "type": "expense",
+                "amount": 50.0,
+                "category": "FOOD",
+                "description": "",
+                "date": "2025-09-22"
+            },
+            {
+                "type": "income",
+                "amount": 1000.0,
+                "category": "SALARY",
+                "description": "",
+                "date": "2025-10-04"
+            },
+            {
+                "type": "expense",
+                "amount": 5.0,
+                "category": "FOOD",
+                "description": "",
+                "date": "2025-10-04"
+            },
+            {
+                "type": "expense",
+                "amount": 15.0,
+                "category": "HOUSEHOLD",
+                "description": "פומפיה",
+                "date": "2025-10-04"
+            },
+            {
+                "type": "expense",
+                "amount": 50.0,
+                "category": "SAVINGS",
+                "description": "היי",
+                "date": "2025-10-04"
+            }
+        ]
+    },
+    "אילן": {
+        "password": "81a83544cf93c245178cbc1620030f1123f435af867c79d87135983c52ab39d9",
+        "transactions": [
+            {
+                "type": "expense",
+                "amount": 30.0,
+                "category": "OTHER",
+                "description": "טיול  לחול",
+                "date": "2025-10-04"
+            }
+        ]
+    },
+    "מעיין": {
+        "password": "f1cfa5ebb149e8099d561aae57beed6c68f990f45a910ea9d7b460dbcc5350be",
+        "transactions": [
+            {
+                "type": "expense",
+                "amount": 50.0,
+                "category": "FOOD",
+                "description": "",
+                "date": "2025-10-04"
+            }
+        ]
+    }
+}
